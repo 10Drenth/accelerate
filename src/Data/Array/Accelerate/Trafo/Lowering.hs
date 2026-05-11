@@ -334,7 +334,7 @@ class NFData' op => LowerAcc (op :: Type -> Type) where
   -- When this is true, a 0-dimensional generate or map will
   -- be converted to Compute nodes, instead of Exec nodes.
   lowerPreferNoScalar :: Bool
-  lowerPreferNoScalar = True
+  lowerPreferNoScalar = False
 
 lower :: (HasCallStack, LowerAcc op) => Named.Acc a -> OperationAcc op () (LoweredArrays a)
 lower = lowerOpenAcc Empty
